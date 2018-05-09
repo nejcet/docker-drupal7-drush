@@ -55,6 +55,8 @@ RUN { \
 RUN { \
 		echo 'post_max_size = 200M'; \
 		echo 'upload_max_filesize = 200M'; \
+		echo 'memory_limit = 512M'; \
+		echo 'max_execution_time = 600'; \
 	} > /usr/local/etc/php/conf.d/drupal-recommended.ini
 
 
