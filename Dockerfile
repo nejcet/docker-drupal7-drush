@@ -67,8 +67,8 @@ RUN php -r "readfile('https://github.com/drush-ops/drush/releases/download/8.1.1
 WORKDIR /var/www/html
 
 # https://www.drupal.org/node/3060/release
-ENV DRUPAL_VERSION 7.59
-ENV DRUPAL_MD5 7e09c6b177345a81439fe0aa9a2d15fc
+ENV DRUPAL_VERSION 7.61
+ENV DRUPAL_MD5 94bc49170d98e0cfe59db487911ecb9d
 
 RUN curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.tar.gz" -o drupal.tar.gz \
 	&& echo "${DRUPAL_MD5} *drupal.tar.gz" | md5sum -c - \
