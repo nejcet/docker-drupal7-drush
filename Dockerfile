@@ -67,7 +67,7 @@ RUN php -r "readfile('https://github.com/drush-ops/drush/releases/download/8.1.1
 WORKDIR /var/www/html
 
 # https://www.drupal.org/node/3060/release
-ENV DRUPAL_VERSION 7.61
+ENV DRUPAL_VERSION 7.100
 ENV DRUPAL_MD5 94bc49170d98e0cfe59db487911ecb9d
 
 RUN curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.tar.gz" -o drupal.tar.gz \
