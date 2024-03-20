@@ -47,7 +47,7 @@ RUN php -r "readfile('https://github.com/drush-ops/drush/releases/download/8.1.1
 WORKDIR /var/www/html
 
 # Drupal herunterladen und installieren
-ENV DRUPAL_VERSION 7.100
+ENV DRUPAL_VERSION 7.72
 ENV DRUPAL_MD5 e1e0963944555bee14bf54af5467192a
 
 RUN curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.tar.gz" -o drupal.tar.gz \
