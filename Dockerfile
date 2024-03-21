@@ -25,6 +25,9 @@ RUN set -ex; \
     # Clean up
 	rm -rf /var/lib/apt/lists/*
 
+# Enable Apache modules
+RUN a2enmod rewrite
+
 # Empfohlene PHP.ini-Einstellungen
 RUN { \
 		echo 'opcache.memory_consumption=128'; \
@@ -42,6 +45,9 @@ RUN { \
 # Drush installieren
 RUN php -r "readfile('https://github.com/drush-ops/drush/releases/download/8.1.10/drush.phar');" > /usr/local/bin/drush && \
     chmod +x /usr/local/bin/drush
+
+# Restart Apache to apply the changes
+RUN service apache2 restart
 
 # Arbeitsverzeichnis festlegen
 WORKDIR /var/www/html
