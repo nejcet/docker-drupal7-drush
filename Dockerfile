@@ -53,8 +53,8 @@ RUN service apache2 restart
 WORKDIR /var/www/html
 
 # Drupal herunterladen und installieren
-ENV DRUPAL_VERSION 7.66
-ENV DRUPAL_MD5 fe1b9e18d7fc03fac6ff4e039ace5b0b
+ENV DRUPAL_VERSION 7.100
+ENV DRUPAL_MD5 e1e0963944555bee14bf54af5467192a
 
 RUN curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.tar.gz" -o drupal.tar.gz \
 	&& echo "${DRUPAL_MD5} *drupal.tar.gz" | md5sum -c - \
